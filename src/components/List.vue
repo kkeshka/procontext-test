@@ -57,15 +57,30 @@ export default {
     };
   },
   methods: {
+    /**
+     * Обращение к экшену стора на перемешку массива листа
+     */
     mixList() {
       this.$store.dispatch('mixList', this.listIndex);
     },
+
+    /**
+     * Обращение к экшену стора на изменение состояния показа листа
+     */
     showList() {
       this.$store.dispatch('showList', this.listIndex);
     },
+
+    /**
+     * Обращение к экшену стора на изменения состояния чекбокса листа
+     */
     checkAll() {
       this.$store.dispatch('checkAll', this.listIndex);
     },
+
+    /**
+     * Обращение к экшену стора на проверку состония чекбоксов айтемов
+     */
     checkCurrentCheckbox() {
       this.$store.dispatch('checkCurrentCheckbox', this.listIndex);
     },

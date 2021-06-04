@@ -46,22 +46,17 @@ export default {
     return {
       mask: inputNumberMask,
       editOpen: false,
-      color: null,
     };
   },
   methods: {
+    /**
+     * Экшены стора на проверку состояния чекбоксов айтемов
+     * и перемешивания массива листа
+     */
     changeCheckbox() {
       this.$emit('checkCurrentCheckbox');
       this.$emit('mixList');
     },
-
-    changeColor() {
-      this.$emit('changeColor', this.color);
-      this.color = this.item.color;
-    },
-  },
-  mounted() {
-    this.color = this.item.color;
   },
 };
 </script>

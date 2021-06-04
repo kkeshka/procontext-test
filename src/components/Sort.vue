@@ -52,10 +52,17 @@ export default {
     };
   },
   methods: {
+    /**
+     * Обращение к экшену стора на удаление айтема
+     */
     removeItem(index, i, color) {
       this.$store.dispatch('removeItem', { index, i, color });
     },
 
+    /**
+     * Обращение к экшену стора на перемешивание массива
+     * переключение состояния перемешки
+     */
     mixList() {
       if (this.isSort === false) {
         this.$store.dispatch('mixList', this.index);
@@ -64,6 +71,9 @@ export default {
       this.isSort = !this.isSort;
     },
 
+    /**
+     * Обращение к экшену стора на изменение состояния показа листа
+     */
     showList() {
       this.$store.dispatch('showList', this.index);
     },
